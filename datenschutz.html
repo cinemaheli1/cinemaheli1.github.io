@@ -7,18 +7,60 @@
 </head>
 <body style="font-family:sans-serif;max-width:700px;margin:40px auto;padding:0 16px;line-height:1.5">
 <h1>Datenschutzerklärung – Heli-Kalender-App</h1>
-<p>Stand: 22. September 2026</p>
-<h2>1. Welche Daten die App nutzt</h2>
-<p>Nach der Anmeldung mit dem eigenen Google-Konto liest die App Kalender und Termine aus Google Calendar, um sie als Agenda auf dem Desktop anzuzeigen.</p>
-<h2>2. Wo die Daten verarbeitet werden</h2>
-<p>Alle Daten werden ausschließlich lokal auf dem Rechner des Nutzers verarbeitet und gespeichert. Das Anmelde-Token wird nur lokal gespeichert. Es gibt keinen eigenen Server.</p>
-<h2>3. Weitergabe an Dritte</h2>
-<p>Es werden keine Daten an Dritte weitergegeben, verkauft oder für Werbung verwendet. Die App kommuniziert nur mit den Google-Servern.</p>
-<h2>4. Einhaltung der Google-Richtlinien</h2>
+<p>Stand: 21. Oktober 2026</p>
+
+<h2>1. Kurz gesagt</h2>
+<p>Die Heli-Kalender-App (Programmname „Heli-Kalender-Agenda“) ist ein Programm für Windows und Linux, das auf dem eigenen Rechner läuft. Es gibt keinen eigenen Server. Die App sammelt keine Nutzungsdaten, macht keine Analyse und keine Werbung und verkauft nichts. Daten gehen nur an die unten genannten Dienste – und jeweils nur das, was die gerade benutzte Funktion braucht.</p>
+
+<h2>2. Google-Konto</h2>
+<p>Nach der Anmeldung mit dem eigenen Google-Konto (im Browser; die Antwort kommt nur an den eigenen Rechner zurück, Adresse 127.0.0.1) spricht die App mit den Google-Schnittstellen. Sie fragt dafür diese Erlaubnisse an:</p>
+<ul>
+<li><b>Google Kalender</b> (lesen und schreiben): Termine anzeigen, anlegen, ändern und löschen.</li>
+<li><b>Google Kontakte</b> (lesen und schreiben): Kontakte anzeigen, anlegen und ändern, Geburtstage zeigen, Kontakte mit Terminen verknüpfen. Kontaktfotos lädt die App von Googles Bildserver (googleusercontent.com).</li>
+<li><b>Google Drive</b>, nur für Dateien, die die App selbst anlegt oder öffnet: Anhänge an Terminen liegen im Ordner „Heli-Kalender-Anhänge“. Andere Dateien in Google Drive sieht die App nicht.</li>
+<li><b>Gmail</b>, nur Senden: Einladungen an Gäste eines Termins, und nur wenn der Nutzer das selbst auslöst. Die App liest keine E-Mails.</li>
+</ul>
+<p>Datenschutz bei Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+
+<h2>3. Microsoft-Konto (Exchange/Outlook, freiwillig)</h2>
+<p>Wer zusätzlich ein Microsoft-Konto einrichtet, meldet sich bei Microsoft an (login.microsoftonline.com). Danach spricht die App mit Microsoft Graph (graph.microsoft.com). Erlaubnisse: das eigene Profil lesen, angemeldet bleiben, <b>Kalender</b> lesen und schreiben, <b>Kontakte</b> lesen und schreiben, <b>Postfach-Einstellungen</b> nur lesen. Anhänge an Outlook-Terminen gehen ebenfalls an Microsoft. Über dieses Konto verschickt die App keine E-Mails; Einladungen an Gäste verschickt Outlook selbst.</p>
+<p>Datenschutz bei Microsoft: <a href="https://privacy.microsoft.com/de-de/privacystatement">privacy.microsoft.com</a></p>
+
+<h2>4. Weitere Dienste</h2>
+<ul>
+<li><b>Verbindungsprüfung (Google):</b> Alle 15 Sekunden schickt die App eine leere Anfrage an www.gstatic.com, um zu sehen, ob das Internet da ist. Dabei gehen keine Termine und keine Namen hinaus.</li>
+<li><b>Kärtchen in der Termin-Ansicht (OpenStreetMap):</b> Der Ort eines Termins geht an Nominatim (<a href="https://nominatim.openstreetmap.org">nominatim.openstreetmap.org</a>, OpenStreetMap Foundation), um ihn auf der Karte zu finden. Die passenden Kartenbilder kommen von tile.openstreetmap.org; daran ist der gezeigte Kartenausschnitt erkennbar. Gefundene Orte und Kartenbilder merkt sich die App auf dem Rechner, damit sie nicht immer neu fragt. Datenschutz: <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org/wiki/Privacy_Policy</a></li>
+<li><b>Adress-Vorschläge</b> (ab Version 3.2.0, im Feld „Ort“ eines Termins und in Kontakt-Adressen):
+<ul>
+<li><b>Photon</b> (<a href="https://photon.komoot.io">photon.komoot.io</a>, betrieben von Komoot, Daten von OpenStreetMap): Beim Tippen geht ab 3 Buchstaben und erst nach einer kurzen Tipp-Pause der getippte Adresstext hinaus, dazu die ungefähre Gegend des eingestellten Wetter-Orts (auf etwa 10 km gerundet), damit nahe Adressen zuerst kommen. Abschaltbar in den Einstellungen („Adress-Vorschläge beim Tippen“). Datenschutz: <a href="https://www.komoot.com/privacy">komoot.com/privacy</a></li>
+<li><b>Nominatim</b> (OpenStreetMap Foundation): Nur beim Klick auf die Lupe „Adresse suchen“ geht genau einmal der Suchtext aus dem Feld hinaus, zusammen mit Name und Version der App als Absender.</li>
+</ul>
+Beide Dienste bekommen keine Termine, keine Namen und keine Kontaktdaten außer dem Text, der gerade im Feld steht. Die App speichert diese Anfragen nicht.</li>
+<li><b>Wetter (Open-Meteo, nur wenn eingeschaltet, Vorgabe: aus):</b> Bei der Suche nach dem Wetter-Ort geht der eingegebene Ortsname an geocoding-api.open-meteo.com. Für die Vorhersage gehen die Koordinaten des Wetter-Orts an api.open-meteo.com. Für das Wetter am Terminort sucht die App weiter entfernte Terminorte über Nominatim (siehe oben) und fragt das Wetter für deren Koordinaten ab. Datenschutz: <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a></li>
+<li><b>Google Maps:</b> Nur bei einem Klick auf einen Ort, ein Kärtchen oder „In Google Maps“ öffnet die App Google Maps mit dieser Adresse.</li>
+</ul>
+
+<h2>5. Handy am USB-Kabel</h2>
+<p>Wer ein Android-Handy per USB-Kabel anschließt, kann über das Werkzeug adb am PC anrufen und eingehende Anrufe sehen. Das läuft nur zwischen Rechner und Handy über das Kabel. Telefonnummern, Anrufe und Kontakt-Namen gehen dabei nicht ins Internet und bleiben auf dem Rechner. Abschaltbar in den Einstellungen („Telefonieren übers Handy“).</p>
+
+<h2>6. Was auf dem Rechner gespeichert wird</h2>
+<p>Alles bleibt im Benutzerordner des Rechners (Windows: <code>%APPDATA%\heli-kalender-app</code>, Linux: <code>~/.config/heli-kalender-app</code>): die Anmeldungen bei Google und Microsoft verschlüsselt über die Schlüsselverwaltung des Systems, dazu Einstellungen, Zwischenspeicher für Termine, Kontakte, Wetter und Kartenorte (damit die App auch ohne Internet etwas zeigt) und ein Fehlerprotokoll. Diese Dateien sind nur für den eigenen Benutzer lesbar und werden nicht verschickt. Geöffnete Outlook-Anhänge legt die App kurz im Temp-Ordner des Systems ab.</p>
+
+<h2>7. Weitergabe an Dritte</h2>
+<p>Es werden keine Daten an Dritte weitergegeben, verkauft oder für Werbung verwendet – außer an die oben genannten Dienste, und nur für die jeweilige Funktion. Für die Verarbeitung bei diesen Diensten gelten deren eigene Datenschutzbestimmungen.</p>
+
+<h2>8. Einhaltung der Google-Richtlinien</h2>
 <p>Die Nutzung und Übertragung von Informationen, die über Google APIs empfangen werden, entspricht der <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, einschließlich der Anforderungen zur eingeschränkten Nutzung (Limited Use).</p>
-<h2>5. Zugriff widerrufen und Daten löschen</h2>
-<p>Der Zugriff kann jederzeit unter <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> widerrufen werden. Beim Deinstallieren der App werden die lokal gespeicherten Daten entfernt.</p>
-<h2>6. Kontakt</h2>
+
+<h2>9. Zugriff widerrufen und Daten löschen</h2>
+<ul>
+<li><b>Google:</b> Der Zugriff kann jederzeit unter <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> widerrufen werden.</li>
+<li><b>Microsoft:</b> privates Konto unter <a href="https://account.live.com/consent/Manage">account.live.com/consent/Manage</a>, Firmen- oder Schulkonto unter <a href="https://myapps.microsoft.com">myapps.microsoft.com</a>.</li>
+<li><b>In der App:</b> Abmelden in den Einstellungen; Wetter, Adress-Vorschläge beim Tippen und Telefonieren übers Handy lassen sich dort abschalten.</li>
+<li><b>Daten auf dem Rechner:</b> Unter Windows beim Deinstallieren den Haken „Auch meine Einstellungen und Anmeldungen löschen“ setzen. Sonst (und unter Linux) den oben genannten Ordner selbst löschen.</li>
+</ul>
+
+<h2>10. Kontakt</h2>
 <p>Über GitHub: <a href="https://github.com/cinemaheli1">github.com/cinemaheli1</a></p>
 <p><a href="index.html">Zurück zur Startseite</a></p>
 </body>
